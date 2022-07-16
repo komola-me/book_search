@@ -34,11 +34,8 @@ def find(update: Update, context: CallbackContext) -> None:
             link = 'https://asaxiy.uz/cart/checkout/'
             
             if book_name in book_title:
-                #update.message.reply_photo(photo=book_photo, caption=f'{book_title} \nNarxi: {price} \nSotib olish: {link}')
-                print(book_photo)
                 update.message.reply_photo(book_photo, f'{book_title} \nNarxi: {price} \nSotib olish: {link}')
-                #update.message.reply_photo(f'{book_photo}')
-
+            
         if page_number < 50:
             page_number = page_number + 1
             find_books(url, page_number)
